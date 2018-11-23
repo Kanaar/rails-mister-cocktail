@@ -1,1 +1,30 @@
-<h1>Index</h1>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_url 'cocktail-mixing.jpg' %>);">
+  <div class="banner-content">
+    <div class="banner-title">
+      <h1>Fucking Tasty Cocktails</h1>
+      <h3>You'll probably get shitfaced</h3>
+    </div>
+    <div class="move-down">
+      <p>drink it down!</p>
+      <i class="fal fa-arrow-circle-down"></i>
+    </div>
+  </div>
+</div>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_url 'background-escher.jpg' %>);">
+  <div class="banner-content">
+    <div class="action-container">
+      <div class="active-cyan-4 mb-4">
+        <input class="cocktail-search form-control" type="text" placeholder="Filter for coctails on name or ingredient" aria-label="Search">
+      </div>
+      <a href="/cocktails/new" class="btn-medium">Upload your own cocktail</a>
+    </div>
+    <div class="cards-container">
+      <% @cocktails.each do |cocktail| %>
+        <%= render partial: "cocktail_card", locals: { cocktail: cocktail } %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+

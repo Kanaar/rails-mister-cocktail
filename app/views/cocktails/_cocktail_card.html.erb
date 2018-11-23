@@ -1,13 +1,8 @@
 <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
   <div class="card-category">Popular</div>
   <div class="card-description">
-    <h2><%= @cocktail.name %></h2>
-    <div class="doses">
-      <% @cocktail.doses.each do |dose| %>
-        <%= render partial: "doses/dose_card", locals: { dose: dose } %>
-      <% end %>
-    </div>
-    <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    <h2><%= cocktail.name %></h2>
   </div>
   <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+  <%= link_to "", cocktail_path(cocktail), class: "card-link"%>
 </div>

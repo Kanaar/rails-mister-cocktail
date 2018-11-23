@@ -1,0 +1,10 @@
+<% ingredient_options = ["Light rum", "Applejack", "Gin", "Dark rum" "Strawberry schnapps", "Scotch", "Apricot brandy"] %>
+
+<div class="new-dose-form">
+  <%= simple_form_for @dose, url: cocktail_doses_path do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "add", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
